@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container>
+    <testcase id="1"
+        type="Source Code"
+        status="Deprecated"
+        submissionDate="2005-10-21"
+        language="C"
+        author="SecureSoftware"
+        numberOfFiles="1">
+        <description>
+            <![CDATA[If one extends a signed number incorrectly, if negative numbers are used, an incorrect extension may result. (from TCCLASP-5_2_10_10)]]>
+        </description>
+        <file path="000/000/001/Sign_extension_error.c"
+        language="C"
+        size="266"
+        checksum="beeea58f70fa3fb0d7e74e0bbb44a42e22dac589"/>
+    </testcase>
+
+    <testcase id="3"
+        type="Source Code"
+        status="Deprecated"
+        submissionDate="2005-10-21"
+        language="C"
+        author="SecureSoftware"
+        numberOfFiles="1">
+        <description>
+            <![CDATA[An unsigned-to-signed conversion error takes place when a large unsignedprimitive is used as an signed value - usually as a size variable. (from TCCLASP-5_2_12_10)[br][br]Duplicate code of Test Case 19]]>
+        </description>
+        <file path="000/000/003/Unsigned_to_signed_conversion_error.c"
+        language="C"
+        size="337"
+        checksum="d913f9336dabb2c67e07da239d57908410884d2e">
+        <flaw line="4"
+        name="CWE-118: Improper Access of Indexable Resource ('Range Error')"/>
+        </file>
+    </testcase>
+
+    <testcase id="4"
+        type="Source Code"
+        status="Candidate"
+        submissionDate="2005-10-21"
+        language="C"
+        author="SecureSoftware"
+        numberOfFiles="1"
+        testsuiteid="17">
+        <description>
+            <![CDATA[Miscalculated null termination occurs when the placement of a null character at the end of a buffer of characters (or string) is misplaced or omitted. (from TCCLASP-5_2_14_9)]]>
+        </description>
+        <file path="000/000/004/Miscalculated_null_termination.c"
+        language="C"
+        size="468"
+        checksum="8bb66382fc751be505259593668886beb0eff30f">
+        <flaw line="6"
+        name="CWE-170: Improper Null Termination"/>
+        </file>
+    </testcase>
+
+    <testcase id="5"
+        type="Source Code"
+        status="Candidate"
+        submisssionDate="2005-10-21"
+        language="C"
+        author="SecureSoftware"
+        numberOfFiles="1">
+        <description>
+            <![CDATA[Improper string length checking takes place when wide or multi-byte character strings are mistaken for standard character strings. (from TCCLASP-5_2_15_10)]]>
+        </description>
+        <file path="000/000/005/Improper_string_length_checking.c"
+        language="C"
+        size="453"
+        checksum="f449e3214e8538773f2af2f982d1c1ae6a35aa21">
+        <flaw line="11"
+        name="CWE-133: String Errors"/>
+        </file>
+    </testcase>
+    <testcase id="382" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = constant, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = none, <br>Local control flow = switch, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = none, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="379"/>
+        <association type="pair" testcaseid="380"/>
+        <association type="pair" testcaseid="381"/>
+        <file path="000/000/382/basic-00067-ok.c" language="C" size="1986" checksum="ebc0baaf585969e83dc8c57540eee7a2ebc86dbe">
+        <fix line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="383" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = variable, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = none, <br>Local control flow = cond, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = 4096 bytes, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="386"/>
+        <file path="000/000/383/basic-00068-large.c" language="C" size="1943" checksum="5b26e2b84b566abdabb8db0b0dec01468e0b96cf">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="384" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = variable, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = none, <br>Local control flow = cond, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = 8 bytes, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="386"/>
+        <file path="000/000/384/basic-00068-med.c" language="C" size="1936" checksum="24696c65bc1be6f642be097ccea0ba188e4eba3b">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="385" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = variable, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = none, <br>Local control flow = cond, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = 1 byte, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="386"/>
+        <file path="000/000/385/basic-00068-min.c" language="C" size="1935" checksum="1eb2aa406d633cc6ba54e76f63b7402a352ec8f4">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="386" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = variable, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = none, <br>Local control flow = cond, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = none, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="383"/>
+        <association type="pair" testcaseid="384"/>
+        <association type="pair" testcaseid="385"/>
+        <file path="000/000/386/basic-00068-ok.c" language="C" size="1937" checksum="3e08fb3e60e7c38d5f796b969182d4baaef53ea5">
+        <fix line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="387" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = constant, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = if, <br>Local control flow = goto/label, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = 4096 bytes, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="390"/>
+        <file path="000/000/387/basic-00069-large.c" language="C" size="1982" checksum="3f17775f8dc67813ccce37d3fc08cd466dcd984d">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="388" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = constant, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = if, <br>Local control flow = goto/label, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = 8 bytes, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="390"/>
+        <file path="000/000/388/basic-00069-med.c" language="C" size="1977" checksum="d738d38e5b6a24c2120cbca5351d2d6c562ca9b9">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="389" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = constant, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = if, <br>Local control flow = goto/label, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = 1 byte, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="390"/>
+        <file path="000/000/389/basic-00069-min.c" language="C" size="1976" checksum="479e3277a44f8771754a037f7a685cf3612e960b">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="390" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = constant, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = if, <br>Local control flow = goto/label, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = none, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="387"/>
+        <association type="pair" testcaseid="388"/>
+        <association type="pair" testcaseid="389"/>
+        <file path="000/000/390/basic-00069-ok.c" language="C" size="1979" checksum="9b74a4dc4ca73ebb9641f6319cf16082b0bc6cd9">
+        <fix line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="391" type="Source Code" status="Candidate" submissionDate="2005-12-27" language="C" author="MIT" numberOfFiles="1" testsuiteid="89">
+        <description><![CDATA[Buffer Overflow. This code has been donated by MIT. This test case has the following characteristics :<br><br>write/read = Write, <br>Which bound = Upper, <br>Data type = character, <br>Memory location = stack, <br>Scope = same, <br>Container = no, <br>Pointer = no, <br>Index complexity = constant, <br>Address complexity = constant, <br>Length complexity = N/A, <br>Address alias = no, <br>Index alias = if, <br>Local control flow = setjmp/longjmp, <br>Secondary control flow = none, <br>Loop structure = N/A, <br>Loop complexity = no, <br>Asynchrony = no, <br>Taint = no, <br>Runtime env. dependence = 4096 bytes, <br>Magnitude = discrete, <br>Continuous/discrete = discrete, <br>Signedness = no.<br><br>]]></description>
+        <association type="pair" testcaseid="394"/>
+        <file path="000/000/391/basic-00070-large.c" language="C" size="2044" checksum="0efc35486381b7fde718339a05fdd478f1340232">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+    </testcase>
+    <testcase id="1291" type="Source Code" status="Candidate" submissionDate="2006-01-24" language="C" author="MIT" numberOfFiles="6" testsuiteid="88">
+        <description><![CDATA[SIG-BUG: CA-1999-14.
+    From MIT benchmarks (models/bind/b2) <br><br>
+
+    A buffer overflow caused by improper handling of SIG records
+    <br><br>
+
+    Bad file: sig-bad.c <br>
+    Bad line number: 561 <br><br>
+
+    Taxonomy classification : 0060301212004 <br>
+    ]]></description>
+        <association type="pair" testcaseid="1292"/>
+        <file path="000/001/291/ns_defs.h" language="C" size="12580" checksum="b3311a7f11543a1d2db63dde17d6f6585ed13cd0"/>
+        <file path="000/001/291/Makefile" size="201" checksum="01de1ba6e5d8b775198501bdb0f794092458f12c"/>
+        <file path="000/001/291/create_msg_file.c" language="C" size="5028" checksum="ae6b8a034f0fe8cbec5322e627bc625257165784"/>
+        <file path="000/001/291/sig-bad.c" language="C" size="16833" checksum="afe1c842877b88def364da241c43a8f8d068a80f">
+        <flaw line="561" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+        <file path="000/001/291/README" size="357" checksum="a42ada85e06575baf62fceeb8bec98d7b331c2a6"/>
+        <file path="000/001/291/test.c" language="C" size="2739" checksum="55fa9d5a30e62dc1a90c77515130fec44f0d1d07"/>
+    </testcase>
+    <testcase id="1292" type="Source Code" status="Candidate" submissionDate="2006-01-24" language="C" author="MIT" numberOfFiles="6" testsuiteid="88">
+        <description><![CDATA[SIG-BUG: CA-1999-14.
+    Patched version.
+    From MIT benchmarks (models/bind/b2) <br><br>
+
+    A buffer overflow caused by improper handling of SIG records
+    <br><br>
+
+    Patched file: sig-ok.c <br>
+    Patched line number: 538 <br>
+    ]]></description>
+        <association type="pair" testcaseid="1291"/>
+        <file path="000/001/292/create_msg_file.c" language="C" size="5028" checksum="ae6b8a034f0fe8cbec5322e627bc625257165784"/>
+        <file path="000/001/292/Makefile" size="196" checksum="bf0c03d1e166de905a8b83c8511f5ba046d82d8b"/>
+        <file path="000/001/292/ns_defs.h" language="C" size="12580" checksum="b3311a7f11543a1d2db63dde17d6f6585ed13cd0"/>
+        <file path="000/001/292/README" size="314" checksum="7ca68a275f2d45b70a25e0417b348f8f16640ea4"/>
+        <file path="000/001/292/sig-ok.c" language="C" size="16064" checksum="568cd8c28221c5c6fbc0240aac99f5bddf566868">
+        <fix line="538" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+        <file path="000/001/292/test.c" language="C" size="2739" checksum="55fa9d5a30e62dc1a90c77515130fec44f0d1d07"/>
+    </testcase>
+    <testcase id="1293" type="Source Code" status="Candidate" submissionDate="2006-01-25" language="C" author="MIT" numberOfFiles="5" testsuiteid="88">
+        <description><![CDATA[NXT-BUG: CA-1999-14.
+    From MIT benchmarks (models/bind/b1) <br><br>
+
+    A buffer overflow in memcpy function in the code handling NXT resource records.
+    <br><br>
+
+    Bad file: nxt-bad.c <br>
+    Bad line number: 405 <br><br>
+
+    Taxonomy classification : 0060301212004 <br>
+    ]]></description>
+        <association type="pair" testcaseid="1294"/>
+        <file path="000/001/293/create_msg_file.c" language="C" size="4644" checksum="7a6814b74a661f0f2cc383964c6000108e536f64"/>
+        <file path="000/001/293/Makefile" size="104" checksum="42a1f4a49d9d6f055a08bf9f0ea1560ecc853953"/>
+        <file path="000/001/293/ns_defs.h" language="C" size="12580" checksum="523aab6525d04269092241b5bbbd014a16c9c8fc"/>
+        <file path="000/001/293/nxt-bad.c" language="C" size="12487" checksum="e32ab1069494d2283f3117d7ad7c035539cd19d3">
+        <flaw line="0" name="CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer"/>
+        </file>
+        <file path="000/001/293/README" size="427" checksum="c5018674d651035987a264aa9852f0789606b65f"/>
+    </testcase>
+    <testcase id="2461" type="Source Code" status="Deprecated" submissionDate="2011-04-08" language="C" numberOfFiles="4" testsuiteid="68">
+        <description><![CDATA[CWE: 114 Process Control<br/> BadSource: relativePath Hard code the relative pathname to the library<br/> GoodSource: Hard code the full pathname to the library<br/> Sink:<br/> BadSink : Load a dynamic link library<br/> Flow Variant: 05 Control flow: if(static_t) and if(static_f)]]></description>
+        <file path="shared/68/io.c" language="C" size="2571" checksum="de477a72b127374c61ef49b378ff82ed22d006f6"/>
+        <file path="shared/68/std_testcase.h" language="C" size="3015" checksum="31030fc798f886c3b2f4437f4581fee976e2d2f4"/>
+        <file path="shared/68/std_testcase_io.h" language="C" size="979" checksum="5f4c43976467e1c7a8b9619c3032e7db34607131"/>
+        <file path="000/002/461/CWE114_Process_Control__w32_char_relativePath_05.c" language="C" size="5011" checksum="4137bc75b1dc4a9e9bef2ce3bc827af75ea9c067">
+          <mixed line="52" name="CWE-114: Process Control"/>
+          <mixed line="39" name="CWE-114: Process Control"/>
+        </file>
+      </testcase>
+      <testcase id="2462" type="Source Code" status="Deprecated" submissionDate="2011-04-08" language="C" numberOfFiles="4" testsuiteid="68">
+        <description><![CDATA[CWE: 114 Process Control<br/> BadSource: relativePath Hard code the relative pathname to the library<br/> GoodSource: Hard code the full pathname to the library<br/> Sink:<br/> BadSink : Load a dynamic link library<br/> Flow Variant: 06 Control flow: if(static_const_five==5) and if(static_const_five!=5)]]></description>
+        <file path="shared/68/io.c" language="C" size="2571" checksum="de477a72b127374c61ef49b378ff82ed22d006f6"/>
+        <file path="shared/68/std_testcase.h" language="C" size="3015" checksum="31030fc798f886c3b2f4437f4581fee976e2d2f4"/>
+        <file path="shared/68/std_testcase_io.h" language="C" size="979" checksum="5f4c43976467e1c7a8b9619c3032e7db34607131"/>
+        <file path="000/002/462/CWE114_Process_Control__w32_char_relativePath_06.c" language="C" size="5003" checksum="90ebaacf385fea6a3abeea51994ab47984539d8a">
+          <mixed line="38" name="CWE-114: Process Control"/>
+          <mixed line="51" name="CWE-114: Process Control"/>
+        </file>
+      </testcase>
+      <testcase id="2463" type="Source Code" status="Deprecated" submissionDate="2011-04-08" language="C" numberOfFiles="4" testsuiteid="68">
+        <description><![CDATA[CWE: 114 Process Control<br/> BadSource: relativePath Hard code the relative pathname to the library<br/> GoodSource: Hard code the full pathname to the library<br/> Sink:<br/> BadSink : Load a dynamic link library<br/> Flow Variant: 07 Control flow: if(static_five==5) and if(static_five!=5)]]></description>
+        <file path="shared/68/io.c" language="C" size="2571" checksum="de477a72b127374c61ef49b378ff82ed22d006f6"/>
+        <file path="shared/68/std_testcase.h" language="C" size="3015" checksum="31030fc798f886c3b2f4437f4581fee976e2d2f4"/>
+        <file path="shared/68/std_testcase_io.h" language="C" size="979" checksum="5f4c43976467e1c7a8b9619c3032e7db34607131"/>
+        <file path="000/002/463/CWE114_Process_Control__w32_char_relativePath_07.c" language="C" size="4991" checksum="a32f32481598b9b995b45782351fba87d7ec940e">
+          <mixed line="38" name="CWE-114: Process Control"/>
+          <mixed line="51" name="CWE-114: Process Control"/>
+        </file>
+      </testcase>
+      <testcase id="1552" type="Source Code" status="Candidate" submissionDate="2006-06-22" language="Java" author="Fortify Software" numberOfFiles="1" testsuiteid="6 27">
+        <description><![CDATA[Tainted input allows arbitrary files to be read and written.]]></description>
+        <association type="pair" testcaseid="1553"/>
+        <file path="000/001/552/File1_bad.java" language="Java" size="2281" checksum="fcae20c0d696fb2da18fcfcc0d4375d72ddaeb4b">
+          <flaw line="47" name="CWE-417: Channel and Path Errors"/>
+          <flaw line="45" name="CWE-417: Channel and Path Errors"/>
+          <flaw line="53" name="CWE-417: Channel and Path Errors"/>
+          <flaw line="0" name="CWE-417: Channel and Path Errors"/>
+        </file>
+      </testcase>
+      <testcase id="1553" type="Source Code" status="Candidate" submissionDate="2006-06-22" language="Java" author="Fortify Software" numberOfFiles="1" testsuiteid="6 27">
+        <description><![CDATA[Tainted input allows arbitrary files to be read and written. (fixed version)]]></description>
+        <association type="pair" testcaseid="1552"/>
+        <file path="000/001/553/File1_ok.java" language="Java" size="2299" checksum="c06feb60737d95ca04b8e16af3e1bd113b410866">
+          <fix line="0" name="CWE-417: Channel and Path Errors"/>
+        </file>
+      </testcase>
+      <testcase id="1554" type="Source Code" status="Candidate" submissionDate="2006-06-22" language="Java" author="Fortify Software" numberOfFiles="1" testsuiteid="6 27">
+        <description><![CDATA[Two file operations are performed on a filename, allowing a filename race condition to occur.]]></description>
+        <file path="000/001/554/File2_bad.java" language="Java" size="2297" checksum="be26e343937101f8d31bfb25cd51ea4b01fbf14e">
+          <flaw line="0" name="CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"/>
+          <flaw line="48" name="CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"/>
+          <flaw line="45" name="CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"/>
+        </file>
+      </testcase>
+      <testcase id="1555" type="Source Code" status="Deprecated" submissionDate="2006-06-22" language="C" author="Fortify Software" numberOfFiles="1" testsuiteid="6">
+        <description><![CDATA[Printf is called with a user supplied format string.]]></description>
+        <association type="pair" testcaseid="1556"/>
+        <association type="replaced" testcaseid="149045"/>
+        <association type="replacing" testcaseid="92"/>
+        <file path="000/001/555/fmt1-bad.c" language="C" size="1293" checksum="0aba53fda202a4147a534ca3ce195c3041fe4e9f">
+          <flaw line="33" name="CWE-134: Uncontrolled Format String"/>
+          <flaw line="0" name="CWE-134: Uncontrolled Format String"/>
+        </file>
+      </testcase>
+      <testcase id="1556" type="Source Code" status="Deprecated" submissionDate="2006-06-22" language="C" author="Fortify Software" numberOfFiles="1" testsuiteid="6 46">
+        <description><![CDATA[Printf is called with a programmer supplied format string.]]></description>
+        <association type="pair" testcaseid="1555"/>
+        <association type="replaced" testcaseid="149046"/>
+        <file path="000/001/556/fmt1-ok.c" language="C" size="1303" checksum="40073c46b9fd26d73521113c9b44d0741649fc5c">
+          <fix line="33" name="CWE-134: Uncontrolled Format String"/>
+        </file>
+      </testcase>
+      <testcase id="1557" type="Source Code" status="Candidate" submissionDate="2006-06-22" language="C" author="Fortify Software" numberOfFiles="1" testsuiteid="6">
+        <description><![CDATA[Syslog is called with a user supplied format string.]]></description>
+        <association type="pair" testcaseid="1558"/>
+        <file path="000/001/557/fmt2-bad.c" language="C" size="1303" checksum="835ce31f30c2733e6fabc657bdd055f9c4ec4057">
+          <flaw line="33" name="CWE-134: Uncontrolled Format String"/>
+          <flaw line="0" name="CWE-134: Uncontrolled Format String"/>
+        </file>
+      </testcase>
+      <testcase id="199231" type="Source Code" status="Candidate" submissionDate="2016-07-22" language="C" instruction="gcc -Wall -I ../../../shared/104 bit_shift.c bit_shift_main.c -lm -lpthread" author="Toyota ITC" numberOfFiles="3" testsuiteid="104">
+        <description><![CDATA[Defect Type: Numerical defects<br>Defect Sub-type: Bit shift bigger than integral type or negative<br>Description: Defect Code to identify bit shift errors<br>]]></description>
+        <association type="pair" testcaseid="199232"/>
+        <file path="shared/104/HeaderFile.h" language="C" size="2062" checksum="387298558c4b4a480210dccb75dd88da6f450a23"/>
+        <file path="000/199/231/bit_shift.c" language="C" size="6431" checksum="7c6c9de856b520ba92b10fe40559e3448b85d070">
+          <flaw line="225" name="CWE-189: Numeric Errors"/>
+          <flaw line="21" name="CWE-189: Numeric Errors"/>
+          <flaw line="45" name="CWE-189: Numeric Errors"/>
+          <flaw line="208" name="CWE-189: Numeric Errors"/>
+          <flaw line="133" name="CWE-189: Numeric Errors"/>
+          <flaw line="175" name="CWE-189: Numeric Errors"/>
+          <flaw line="163" name="CWE-189: Numeric Errors"/>
+          <flaw line="106" name="CWE-189: Numeric Errors"/>
+          <flaw line="236" name="CWE-189: Numeric Errors"/>
+          <flaw line="120" name="CWE-189: Numeric Errors"/>
+          <flaw line="69" name="CWE-189: Numeric Errors"/>
+          <flaw line="193" name="CWE-189: Numeric Errors"/>
+          <flaw line="93" name="CWE-189: Numeric Errors"/>
+          <flaw line="81" name="CWE-189: Numeric Errors"/>
+          <flaw line="146" name="CWE-189: Numeric Errors"/>
+        </file>
+        <file path="000/199/231/bit_shift_main.c" language="C" size="883" checksum="41ca6c148b61d2b88eb36aa0b447e208dd0162b3"/>
+      </testcase>
+      <testcase id="199232" type="Source Code" status="Candidate" submissionDate="2016-07-22" language="C" instruction="gcc -Wall -I ../../../shared/104 bit_shift.c bit_shift_main.c -lm -lpthread" author="Toyota ITC" numberOfFiles="3" testsuiteid="104">
+        <description><![CDATA[Defect Type: Numerical defects<br>Defect Sub-type: Bit shift bigger than integral type or negative<br>Description: Defect Free Code to identify false positives in bit shift errors<br>]]></description>
+        <association type="pair" testcaseid="199231"/>
+        <file path="shared/104/HeaderFile.h" language="C" size="2062" checksum="387298558c4b4a480210dccb75dd88da6f450a23"/>
+        <file path="000/199/231/bit_shift_main.c" language="C" size="883" checksum="41ca6c148b61d2b88eb36aa0b447e208dd0162b3"/>
+        <file path="000/199/232/bit_shift.c" language="C" size="6601" checksum="758ba6165191267cbf71a5c3a9aeb3f3f6ab41ba">
+          <fix line="120" name="CWE-189: Numeric Errors"/>
+          <fix line="146" name="CWE-189: Numeric Errors"/>
+          <fix line="106" name="CWE-189: Numeric Errors"/>
+          <fix line="33" name="CWE-189: Numeric Errors"/>
+          <fix line="45" name="CWE-189: Numeric Errors"/>
+          <fix line="69" name="CWE-189: Numeric Errors"/>
+          <fix line="81" name="CWE-189: Numeric Errors"/>
+          <fix line="21" name="CWE-189: Numeric Errors"/>
+          <fix line="57" name="CWE-189: Numeric Errors"/>
+          <fix line="175" name="CWE-189: Numeric Errors"/>
+          <fix line="133" name="CWE-189: Numeric Errors"/>
+          <fix line="225" name="CWE-189: Numeric Errors"/>
+          <fix line="193" name="CWE-189: Numeric Errors"/>
+          <fix line="93" name="CWE-189: Numeric Errors"/>
+          <fix line="236" name="CWE-189: Numeric Errors"/>
+          <fix line="163" name="CWE-189: Numeric Errors"/>
+          <fix line="208" name="CWE-189: Numeric Errors"/>
+        </file>
+      </testcase>
+      <testcase id="199233" type="Source Code" status="Candidate" submissionDate="2016-07-22" language="C" instruction="gcc -Wall -I ../../../shared/104 buffer_overrun_dynamic.c buffer_overrun_dynamic_main.c -lm -lpthread" author="Toyota ITC" numberOfFiles="3" testsuiteid="104">
+        <description><![CDATA[Defect Type: Dynamic memory defects<br>Defect Sub-type: Dynamic buffer overrun<br>Created on: Sep 27, 2012<br>Author: caesaru01<br><br>The test case contains coincidental vulnerabilities among with intended ones as follows for file buffer_overrun_dynamic.c:<br>* line(s): 145,151,153,173,434,511,513,550,558 CWE-476<br>* line(s): 332 CWE-121<br>* line(s): 476,492 CWE-704<br>* line(s): 495 CWE-468<br>* line(s): 606 CWE-823<br>]]></description>
+        <association type="pair" testcaseid="199234"/>
+        <file path="shared/104/HeaderFile.h" language="C" size="2062" checksum="387298558c4b4a480210dccb75dd88da6f450a23"/>
+        <file path="000/199/233/buffer_overrun_dynamic.c" language="C" size="14454" checksum="91b8c5c23d437b003af6faaf26edd984be1a6eca">
+          <flaw line="311" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="511" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="153" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="262" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="513" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="606" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="129" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="297" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="332" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="492" name="CWE-704: Incorrect Type Conversion or Cast"/>
+          <flaw line="606" name="CWE-823: Use of Out-of-range Pointer Offset"/>
+          <flaw line="61" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="111" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="579" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="151" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="421" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="434" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="479" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="531" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="247" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="402" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="145" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="151" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="173" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="513" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="461" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="550" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="349" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="495" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="558" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="76" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="173" name="CWE-476: NULL Pointer Dereference"/>
+          <flaw line="277" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="386" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="434" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="26" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="41" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="217" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="197" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="232" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="368" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="495" name="CWE-468: Incorrect Pointer Scaling"/>
+          <flaw line="93" name="CWE-122: Heap-based Buffer Overflow"/>
+          <flaw line="332" name="CWE-121: Stack-based Buffer Overflow"/>
+          <flaw line="476" name="CWE-704: Incorrect Type Conversion or Cast"/>
+          <flaw line="558" name="CWE-122: Heap-based Buffer Overflow"/>
+        </file>
+        <file path="000/199/233/buffer_overrun_dynamic_main.c" language="C" size="785" checksum="d37783fa70abfd43209b4c79051ef18323809c25"/>
+      </testcase>
+</container>

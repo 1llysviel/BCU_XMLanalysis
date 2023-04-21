@@ -1,0 +1,311 @@
+ID:3 
+
+ Name:CWE-118: Improper Access of Indexable Resource ('Range Error') 
+
+ Language: C  
+
+ Path:000/000/003/Unsigned_to_signed_conversion_error.c 
+
+ Line:['4'] 
+
+****************************************** 
+
+ ID:4 
+
+ Name:CWE-170: Improper Null Termination 
+
+ Language: C  
+
+ Path:000/000/004/Miscalculated_null_termination.c 
+
+ Line:['6'] 
+
+****************************************** 
+
+ ID:5 
+
+ Name:CWE-133: String Errors 
+
+ Language: C  
+
+ Path:000/000/005/Improper_string_length_checking.c 
+
+ Line:['11'] 
+
+****************************************** 
+
+ ID:6 
+
+ Name:CWE-416: Use After Free 
+
+ Language: C  
+
+ Path:000/000/006/Using_freed_memory.c 
+
+ Line:['15', '12'] 
+
+****************************************** 
+
+ ID:7 
+
+ Name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer 
+
+ Language: C  
+
+ Path:000/000/007/Buffer_overflow.c 
+
+ Line:['3'] 
+
+****************************************** 
+
+ ID:8 
+
+ Name:CWE-123: Write-what-where Condition 
+
+ Language: C  
+
+ Path:000/000/008/Doubly_freeing_memory.c 
+
+ Line:['0'] 
+
+****************************************** 
+
+ ID:10 
+
+ Name:CWE-134: Uncontrolled Format String 
+
+ Language: C  
+
+ Path:000/000/010/Format_string_problem.c 
+
+ Line:['27'] 
+
+****************************************** 
+
+ ID:11 
+
+ Name:CWE-078: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') 
+
+ Language: C  
+
+ Path:000/000/011/Command_injection.c 
+
+ Line:['15'] 
+
+****************************************** 
+
+ ID:13 
+
+ Name:CWE-123: Write-what-where Condition 
+
+ Language: C  
+
+ Path:000/000/013/Write-what-where_condition.c 
+
+ Line:['5'] 
+
+****************************************** 
+
+ ID:14 
+
+ Name:CWE-121: Stack-based Buffer Overflow 
+
+ Language: C  
+
+ Path:000/000/014/Stack_overflow.c 
+
+ Line:['5'] 
+
+****************************************** 
+
+ ID:15 
+
+ Name:CWE-122: Heap-based Buffer Overflow 
+
+ Language: C  
+
+ Path:000/000/015/Heap_overflow.c 
+
+ Line:['5'] 
+
+****************************************** 
+
+ ID:16 
+
+ Name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer 
+
+ Language: C++  
+
+ Path:000/000/016/Buffer_underwrite.cpp 
+
+ Line:['9'] 
+
+****************************************** 
+
+ ID:19 
+
+ Name:CWE-118: Improper Access of Indexable Resource ('Range Error') 
+
+ Language: C  
+
+ Path:000/000/019/Integer_coercion_error.c 
+
+ Line:['4'] 
+
+****************************************** 
+
+ ID:20 
+
+ Name:CWE-118: Improper Access of Indexable Resource ('Range Error') 
+
+ Language: C  
+
+ Path:000/000/020/Truncation_error.c 
+
+ Line:['6'] 
+
+****************************************** 
+
+ ID:38 
+
+ Name:CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') 
+
+ Language: C  
+
+ Path:000/000/038/Race_condition_in_switch.c 
+
+ Line:['10', '0', '9', '11'] 
+
+****************************************** 
+
+ ID:39 
+
+ Name:CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') 
+
+ Language: C  
+
+ Path:000/000/039/Race_condition_in_signal_handler.c 
+
+ Line:['18', '19', '0'] 
+
+****************************************** 
+
+ ID:40 
+
+ Name:CWE-255: Credentials Management 
+
+ Language: C  
+
+ Path:000/000/040/Use_of_hard-coded_cryptographic_key.c 
+
+ Line:['9', '0'] 
+
+****************************************** 
+
+ ID:54 
+
+ Name:CWE-254: Security Features 
+
+ Language: C  
+
+ Path:000/000/054/Reusing_a_nonce_key_pair_in_encryption.c 
+
+ Line:['0'] 
+
+****************************************** 
+
+ ID:69 
+
+ Name:CWE-259: Use of Hard-coded Password 
+
+ Language: C  
+
+ Path:000/000/069/Use_of_hard-coded_password.c 
+
+ Line:['10'] 
+
+****************************************** 
+
+ ID:73 
+
+ Name:CWE-391: Unchecked Error Condition 
+
+ Language: C  
+
+ Path:000/000/073/Improper_error_handling.c 
+
+ Line:['0'] 
+
+****************************************** 
+
+ ID:74 
+
+ Name:CWE-389: Error Conditions, Return Values, Status Codes 
+
+ Language: C  
+
+ Path:000/000/074/Ignored_function_return_value.c 
+
+ Line:['3', '0'] 
+
+****************************************** 
+
+ ID:75 
+
+ Name:CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') 
+
+ Language: C  
+
+ Path:000/000/075/Improper_temp_file_opening.c 
+
+ Line:['0'] 
+
+****************************************** 
+
+ ID:78 
+
+ Name:CWE-457: Use of Uninitialized Variable 
+
+ Language: C  
+
+ Path:000/000/078/Uninitialized_variable.c 
+
+ Line:['0'] 
+
+****************************************** 
+
+ ID:81 
+
+ Name:CWE-467: Use of sizeof() on a Pointer Type 
+
+ Language: C  
+
+ Path:000/000/081/Use_of_sizeof()_on_a_pointer_type.c 
+
+ Line:['0'] 
+
+****************************************** 
+
+ ID:88 
+
+ Name:CWE-121: Stack-based Buffer Overflow 
+
+ Language: C  
+
+ Path:000/000/088/ahgets-bad1.c 
+
+ Line:['0'] 
+
+****************************************** 
+
+ ID:92 
+
+ Name:CWE-134: Uncontrolled Format String 
+
+ Language: C  
+
+ Path:000/000/092/fmt-bad1.c 
+
+ Line:['15'] 
+
+****************************************** 

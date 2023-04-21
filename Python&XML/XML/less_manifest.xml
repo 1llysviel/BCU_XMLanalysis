@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container shelf="test">
+    <testcase id="1" 
+        type="Source Code" 
+        status="Deprecated" 
+        submissionDate="2005-10-21" 
+        language="C" 
+        author="SecureSoftware" 
+        numberOfFiles="1">
+        <description>
+            <![CDATA[If one extends a signed number incorrectly, if negative numbers are used, an incorrect extension may result. (from TCCLASP-5_2_10_10)]]>
+        </description>
+        <file path="000/000/001/Sign_extension_error.c" 
+        language="C" 
+        size="266" 
+        checksum="beeea58f70fa3fb0d7e74e0bbb44a42e22dac589"/>
+    </testcase>
+
+    <testcase id="3" 
+        type="Source Code" 
+        status="Deprecated" 
+        submissionDate="2005-10-21" 
+        language="C" 
+        author="SecureSoftware" 
+        numberOfFiles="1">
+        <description>
+            <![CDATA[An unsigned-to-signed conversion error takes place when a large unsignedprimitive is used as an signed value - usually as a size variable. (from TCCLASP-5_2_12_10)[br][br]Duplicate code of Test Case 19]]>
+        </description>
+        <file path="000/000/003/Unsigned_to_signed_conversion_error.c" 
+        language="C" 
+        size="337" 
+        checksum="d913f9336dabb2c67e07da239d57908410884d2e">
+        <flaw line="4" 
+        name="CWE-118: Improper Access of Indexable Resource ('Range Error')"/>
+        </file>
+    </testcase>
+    
+    <testcase id="4" 
+        type="Source Code" 
+        status="Candidate" 
+        submissionDate="2005-10-21" 
+        language="C" 
+        author="SecureSoftware" 
+        numberOfFiles="1" 
+        testsuiteid="17">
+        <description>
+            <![CDATA[Miscalculated null termination occurs when the placement of a null character at the end of a buffer of characters (or string) is misplaced or omitted. (from TCCLASP-5_2_14_9)]]>
+        </description>
+        <file path="000/000/004/Miscalculated_null_termination.c" 
+        language="C" 
+        size="468" 
+        checksum="8bb66382fc751be505259593668886beb0eff30f">
+        <flaw line="6" 
+        name="CWE-170: Improper Null Termination"/>
+        </file>
+    </testcase>
+
+    <testcase id="5" 
+        type="Source Code" 
+        status="Candidate" 
+        submisssionDate="2005-10-21" 
+        language="C" 
+        author="SecureSoftware" 
+        numberOfFiles="1">
+        <description>
+            <![CDATA[Improper string length checking takes place when wide or multi-byte character strings are mistaken for standard character strings. (from TCCLASP-5_2_15_10)]]>
+        </description>
+        <file path="000/000/005/Improper_string_length_checking.c"
+        language="C" 
+        size="453" 
+        checksum="f449e3214e8538773f2af2f982d1c1ae6a35aa21">
+        <flaw line="11" 
+        name="CWE-133: String Errors"/>
+        </file>
+    </testcase>
+</container>
