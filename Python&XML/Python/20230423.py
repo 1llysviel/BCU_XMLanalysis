@@ -9,9 +9,9 @@ def clear_file(filename):
         flage = False
 
 def source_file(path):  #通过漏洞对应路径获取相应源文件
-    with open(r'D:/source_file.txt',mode='a',encoding='utf-8') as s:  #将源文件对应的文件对象命名为s
+    with open(r'source_file.txt',mode='a',encoding='utf-8') as s:  #将源文件对应的文件对象命名为s
         clear_file(s)
-        new_path='D:/Sard_archive/testcases/'+path
+        new_path=path
         try:
          with open(new_path,mode='r',encoding='utf-8') as r:  #将路径对应文件的文件对象设置为r
             a=r.read()
@@ -25,9 +25,9 @@ def source_file(path):  #通过漏洞对应路径获取相应源文件
             return
 
 def line_file(path,line):  #通过漏洞对应路径获取相应源文件
-    with open(r'D:/line_file.txt',mode='a',encoding='utf-8') as l:  #将漏洞文件对应的文件对象命名为s
+    with open(r'line_file.txt',mode='a',encoding='utf-8') as l:  #将漏洞文件对应的文件对象命名为s
         clear_file(l)
-        new_path='D:/Sard_archive/testcases/'+path
+        new_path=path
         try:
           with open(new_path,mode='r',encoding='utf-8') as r:  #将路径对应文件的文件对象设置为r
                 a=r.readlines()
@@ -87,14 +87,14 @@ class ConfigHandler(xml.sax.ContentHandler):
     def endElement(self,name):   #endElement(name) : 遇到XML结束标签时调用
         global line
         if name == "testcase":  #表示一个id对应的段落读取完毕
-             with open(r"D:\xml_file.txt", mode="a", encoding="utf-8") as log:  # 创建一个文件对象log，便于将读取的数据放入文件
+             with open(r'xml_file.txt', mode="a", encoding="utf-8") as log:  # 创建一个文件对象log，便于将读取的数据放入文件
                 clear_file(log)
                 if self.line and self.id and self.path :   #如果缺陷行号不为空，那么就说明存在缺陷，既满足提取条件,并且源代码是用C语言或者c++书写，那么就获取对应路径和错误名称
                     if  self.language=="C" or self.language=="C++":
                             print(f'文件路径为：{self.path}')
                             source_file(self.path)  #将文件目录对应的文件内容写入D盘符source_file文件中
                             line_file(self.path,self.line)
-                            print(f"id:{self.id} \nlanguage:{self.language}\nname：{self.name}\npath：{self.path}\nline:{line}",file=log)
+                            print(f"id:{self.id} \nlanguage:{self.language}\nname:{self.name}\npath:{self.path}\nline:{line}",file=log)
                             self.id=None
                             self.path=None
                             self.line=None
@@ -104,13 +104,13 @@ class ConfigHandler(xml.sax.ContentHandler):
     def endDocument(self):
         print("*****************xml file parsing is complete*****************")
 
-        
+
 if __name__ == "__main__":
     parser = xml.sax.make_parser() #这行代码创建了一个SAX解析器对象，用于解析XML文件
     parser.setFeature(xml.sax.handler.feature_namespaces, 0)
     Handler = ConfigHandler()
     parser.setContentHandler(Handler)
     # 解析 xml 这里可以写xml 的具体路径,为了简单放在了同一个文件夹里面了
-    # parser.parse("111.xml")
-    parser.parse("full_manifest.xml")
+    parser.parse('less_manifest.xml')
+    # parser.parse('full_manifest.xml')
 

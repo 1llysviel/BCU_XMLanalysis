@@ -1,0 +1,114 @@
+id:3 
+language:C
+name:CWE-118: Improper Access of Indexable Resource ('Range Error')
+path:000/000/003/Unsigned_to_signed_conversion_error.c
+line:['4']
+=============================
+id:4 
+language:C
+name:CWE-170: Improper Null Termination
+path:000/000/004/Miscalculated_null_termination.c
+line:['6']
+=============================
+id:5 
+language:C
+name:CWE-133: String Errors
+path:000/000/005/Improper_string_length_checking.c
+line:['11']
+=============================
+id:383 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/000/383/basic-00068-large.c
+line:['0']
+=============================
+id:384 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/000/384/basic-00068-med.c
+line:['0']
+=============================
+id:385 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/000/385/basic-00068-min.c
+line:['0']
+=============================
+id:387 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/000/387/basic-00069-large.c
+line:['0']
+=============================
+id:388 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/000/388/basic-00069-med.c
+line:['0']
+=============================
+id:389 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/000/389/basic-00069-min.c
+line:['0']
+=============================
+id:391 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/000/391/basic-00070-large.c
+line:['0']
+=============================
+id:1291 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/001/291/test.c
+line:['561']
+=============================
+id:1293 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:000/001/293/README
+line:['0']
+=============================
+id:1555 
+language:C
+name:CWE-134: Uncontrolled Format String
+path:000/001/555/fmt1-bad.c
+line:['47', '45', '53', '0', '0', '48', '45', '33', '0']
+=============================
+id:1557 
+language:C
+name:CWE-134: Uncontrolled Format String
+path:000/001/557/fmt2-bad.c
+line:['33', '0']
+=============================
+id:199231 
+language:C
+name:CWE-189: Numeric Errors
+path:000/199/231/bit_shift_main.c
+line:['225', '21', '45', '208', '133', '175', '163', '106', '236', '120', '69', '193', '93', '81', '146']
+=============================
+id:199233 
+language:C
+name:CWE-122: Heap-based Buffer Overflow
+path:000/199/233/buffer_overrun_dynamic_main.c
+line:['311', '511', '153', '262', '513', '606', '129', '297', '332', '492', '606', '61', '111', '579', '151', '421', '434', '479', '531', '247', '402', '145', '151', '173', '513', '461', '550', '349', '495', '558', '76', '173', '277', '386', '434', '26', '41', '217', '197', '232', '368', '495', '93', '332', '476', '558']
+=============================
+id:149042 
+language:C
+name:CWE-126: Buffer Over-read
+path:000/149/042/inputs/heartbleed-48k
+line:['245']
+=============================
+id:231334 
+language:C
+name:CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+path:shared/90/channels/chan_sip.c
+line:['22796']
+=============================
+id:199231 
+language:C
+name:CWE-189: Numeric Errors
+path:000/199/231/bit_shift_main.c
+line:['225', '21', '45', '208', '133', '175', '163', '106', '236', '120', '69', '193', '93', '81', '146']
+=============================
