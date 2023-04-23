@@ -4,4 +4,8 @@ Python&XML/Python/full_manifest.xml
 full_manifest.xml
 line_file.txt
 source_file.txt
+<<<<<<< HEAD
 xml_file.txt
+=======
+xml_file.txt
+>>>>>>> 559e056c6eeedd8472260886e799dc34f79a5ff8
