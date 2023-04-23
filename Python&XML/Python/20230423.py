@@ -113,6 +113,6 @@ if __name__ == "__main__":
     Handler = ConfigHandler()
     parser.setContentHandler(Handler)
     # 解析 xml 这里可以写xml 的具体路径,为了简单放在了同一个文件夹里面了
-    parser.parse('less_manifest.xml')
-    # parser.parse('full_manifest.xml')
+    # parser.parse('less_manifest.xml')
+    parser.parse('full_manifest.xml')
 
