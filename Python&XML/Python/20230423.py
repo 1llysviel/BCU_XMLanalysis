@@ -11,6 +11,7 @@ def clear_file(filename):
 def source_file(path):  #通过漏洞对应路径获取相应源文件
     with open(r'source_file.txt',mode='a',encoding='utf-8') as s:  #将源文件对应的文件对象命名为s
         clear_file(s)
+        # new_path='D:/Sard_archive/testcases/'+path
         new_path=path
         try:
          with open(new_path,mode='r',encoding='utf-8') as r:  #将路径对应文件的文件对象设置为r
@@ -27,6 +28,7 @@ def source_file(path):  #通过漏洞对应路径获取相应源文件
 def line_file(path,line):  #通过漏洞对应路径获取相应源文件
     with open(r'line_file.txt',mode='a',encoding='utf-8') as l:  #将漏洞文件对应的文件对象命名为s
         clear_file(l)
+        # new_path='D:/Sard_archive/testcases/'+path
         new_path=path
         try:
           with open(new_path,mode='r',encoding='utf-8') as r:  #将路径对应文件的文件对象设置为r
