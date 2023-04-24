@@ -1,44 +1,53 @@
-from importlib.resources import path
-import os
+Point = True
 
-#  ID:6
+def clear_file(filename):
+    global Point
+    if Point ==True:
+        filename.truncate(0)
+        Point = False
 
-#  Name:CWE-416: Use After Free
+def source_file(path):
+    with open(r'source_file.txt',mode='a',encoding='utf-8') as source:
+        clear_file(source)
+        source_code = path
+        try:
+            with open(source_code,mode='r',encoding='utf-8') as resource:
+                add = resource.read()
+                source.write(add)
+                source.write("========================================\n")
+        except UnicodeDecodeError:
+            print("无法找到正确的打开文件编码格式")
+            return
+        except FileNotFoundError:
+            print("未找到路径所在文件")
+            return
 
-#  Language: C
+def line_file(path,line):
+    with open(r'line_file.txt',mode='a',encoding='utf-8') as LineNum:
+        clear_file(LineNum)
+        source_line = path
+        try:
+            with open(source_line,mode='r',encoding='utf-8') as resource:
+                add = resource.readlines()
+                new_list = list(map(int,line))
+                for i in new_list:
+                    print(add[i-1].strip('\n'))
+                    LineNum.write(add[i-1].strip('\n'))
+                LineNum.write("========================================\n")
+        except UnicodeDecodeError:
+            print("无法找到正确的打开文件编码格式")
+            return
+        except FileNotFoundError:
+            print("未找到路径所在文件")
+            return
+        except IndexError:
+            print("漏洞行数少于源文件行数")
+            return
 
-#  Path:000/000/006/Using_freed_memory.c
-
-#  Line:['15', '12']
-
-# ******************************************
-Line = [] #log.txt已有
-lines = []
-lines.append(Line)
-#需要循环读取log.txt中的Line数组内容，添加进lines
-
-#思路2：仿照xml，循环def，每次重置
-
-output_file = 'output.txt'
-
-# with open('log2.txt', 'r', encoding="utf-8") as f:
-#     paths = f.read().split()
-
-#     for i in paths:
-#         for path in paths:
-#             for dirpath, _, filenames in os.walk(path): #遍历path中所有目录和子目录，返回当前目录地址，当前目录下所有子目录名称，当前目录下所有文件名称
-#                 for filename in filenames:
-#                     if filename.endswith('.c'):
-#                         # 使用os.path.join()函数拼接路径和文件名
-#                         file_path = os.path.join(dirpath, filename) #拼接目录路径和文件名称为完整路径
-#                         with open(file_path, 'r') as f:
-#                             Flines =f.readline()
-#                             for l in lines[i]:
-#                                 output_file.write(lines[l-1])
-
-with open('log2.txt', mode= "r" , encoding= "utf-8") as input:
-    path = input.read().split()
-    for i,Path in input:
-        if Path.endswith('.c'):
-            test = Path
-            print(test)
+def output_line(line):
+    print(f"漏洞对应行数：",end='')
+    for i in range(len(line)):
+        if i == len(line)-1:
+            print(line[i])
+        else:
+            print(line[i],end=",")
