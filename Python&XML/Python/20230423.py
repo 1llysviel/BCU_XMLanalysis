@@ -9,15 +9,15 @@ def clear_file(filename):
         flage = False
 
 def source_file(path):  #通过漏洞对应路径获取相应源文件
-    with open(r'source_file.txt',mode='a',encoding='utf-8') as s:  #将源文件对应的文件对象命名为s
-        clear_file(s)
+    with open(r'source_file.txt',mode='a',encoding='utf-8') as source:  #将源文件对应的文件对象命名为source
+        clear_file(source)
         # new_path='D:/Sard_archive/testcases/'+path
         new_path=path
         try:
-         with open(new_path,mode='r',encoding='utf-8') as r:  #将路径对应文件的文件对象设置为r
-            a=r.read()
-            s.write(a)
-            s.write("==============================\n")
+         with open(new_path,mode='r',encoding='utf-8') as resource:  #将路径对应文件的文件对象设置为resource
+            a=resource.read()
+            source.write(a)
+            source.write("==============================\n")
         except UnicodeDecodeError:
             print("无法找到正确的打开文件编码格式")
             return
@@ -59,6 +59,7 @@ def  print_line(line):  #将漏洞列表中元素进行输出，并用逗号进�
 
 class ConfigHandler(xml.sax.ContentHandler):
     def __init__(self):
+
         self.path = ""
         self.line = ""
         self.name = ""
@@ -82,9 +83,6 @@ class ConfigHandler(xml.sax.ContentHandler):
                 self.line = attributes['line']
                 line.append(self.line)  #将获取到的漏洞所在行数追加到line列表中
 
-    def characters(self, content):
-        pass
-
     # 结束解析xml
     def endElement(self,name):   #endElement(name) : 遇到XML结束标签时调用
         global line
@@ -97,10 +95,12 @@ class ConfigHandler(xml.sax.ContentHandler):
                             source_file(self.path)  #将文件目录对应的文件内容写入D盘符source_file文件中
                             line_file(self.path,self.line)
                             print(f"id:{self.id} \nlanguage:{self.language}\nname:{self.name}\npath:{self.path}\nline:{line}",file=log)
+
                             self.id=None
                             self.path=None
                             self.line=None
                             line.clear()  #每次将漏洞行数信息写入列表的前，将列表内容初始化
+
                             print("=============================",file=log)
     # xml结束标签调用
     def endDocument(self):
